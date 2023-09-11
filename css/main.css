@@ -1,0 +1,52 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 102px;
+    width: 100%;
+    border-bottom: 0.7px solid #C4C4C4;
+}
+
+.nav_logo {
+    width: 92px;
+    height: 92px;
+}
+
+.nav_title {
+    color: #1090CB;
+    font-weight: bold;
+    font-size: 29px;
+}
+
+.nav_flex_judul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav_flex_atribut {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 528px;
+}
+
+.nav_flex_atribut a {
+    font-size: 16px;
+}
+
+.nav_flex_atribut a button {
+    width: 125px;
+    height: 18px;
+    background-color: #1090CB;
+    border-radius: 6px;
+    color: white;
+}
+
+.section1 {
+    background-color: rgba(16, 144, 203, 0.1);
+    width: 100%;
+    height: 630px;
+}
