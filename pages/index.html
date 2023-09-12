@@ -11,32 +11,97 @@
     <!-- Navbar -->
     <nav class="navbar">
         <!-- Logo dan Judul -->
-        <div class="nav_flex_judul">
-            <img src="/image/landing_logo.svg" class="nav_logo">
-            <h1 class="nav_title">PROMIL</h1>
+        <div class="nav-flex-judul">
+            <img src="/image/landing_logo.svg" style="width: 92px; height: 92px;">
+            <h1 style="color: #1090CB; font-size: 29px;">PROMIL</h1>
+            <div class="vertical-line"></div>
+            <!-- Atribut -->
+            <div class="nav-flex-atribut">
+                <a href="/pages/index.html">Home</a>
+                <a href="/pages/aboutus.html">About us</a>
+                <a href="/pages/services.html">Services</a>
+            </div>  
         </div>
-        <!-- Atribut -->
-        <div class="nav_flex_atribut">
-            <a href="/pages/index.html">Home</a>
-            <a href="/pages/aboutus.html">About us</a>
-            <a href="/pages/services.html">Services</a>
-            <a href="/pages/login.html" class="nav_login"><button>Login</button></a>
+        <!-- Login dan Search-->
+        <div class="nav-flex-log">
+            <img src="/image/landing_nav_search.svg">
+            <a href="/pages/login.html"><button>Login</button></a>
         </div>
+        
     </nav>
 
+    <!-- Section 1 -->
     <section class="section1">
-        <div class="sec1_konten">
-            <h1 class="sec1_title">Lorem Ipsum is <span>simply dummy</span> text of the printing and typesetting industry.</h1>
-            <p class="sec1_deskripsi">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        <div class="sec1-konten">
+            <!-- Konten -->
+            <h1 style="font-size: 40px;">Hi Moms!</h1>
+            <p class="sec1-deskripsi" style="margin: 0;">
+                We will kindly help your pregnancy process with various information and health tips!
             </p>
-            
-            <div class="sec1_button">
-                <a href="/pages/contactus.html"><button class="sec1_contactus">Contact Us</button></a>
-                <button class="sec1_viewmore">View more</button>
+            <!-- Button -->
+            <div class="sec1-button">
+                <a href="/pages/contactus.html"><button class="sec1-contactus">Contact Us</button></a>
+                <button class="sec1-viewmore">View more</button>
             </div>
         </div>
-        <img src="/image/landing_sec1_image.svg" class="sec1_image">
+        <img src="/image/landing_sec1_image.svg" class="sec1-image">
+    </section>
+
+    <!-- Section 2 -->
+    <section class="section2">
+        <h1 style="font-size: 40px;">Our <span style="color: #1090CB;">Services</span></h1>
+        <!-- Fitur -->
+        <div class="sec2-fitur">
+            <div style="display: flex; flex-direction: column;">
+                <!-- Stage of Pregnancy -->
+                <a href="/pages/stagepreg.html">
+                    <img src="/image/landing_sec2_fitur_stage.svg" alt="">
+                    <div class="sec2-fitur-konten">
+                        <h2 style="font-size: 25px; transform: translateY(7px);">Stage of Pregnancy</h2>
+                        <p style="font-size: 16px; color: #797979; width: 360px; transform: translateY(-13px);">
+                            Fetal development during each week of pregnancy.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Nutrition Guide -->
+                <a href="/pages/nutrition.html" style="margin-top: 108px;"> 
+                    <img src="/image/landing_sec2_fitur_nutrition.svg" alt="">
+                    <div class="sec2-fitur-konten">
+                        <h2 style="font-size: 25px; transform: translateY(9px);">Nutrition Guide</h2>
+                        <p style="font-size: 16px; color: #797979; width: 360px; transform: translateY(-13px);">
+                            Healthy foods that should be consumed during pregnancy, as well as foods that need to be avoided.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            
+            <div style="display: flex; flex-direction: column;">
+                <!-- Symptom & Advicee -->
+                <a href="/pages/symptom.html"> 
+                    <img src="/image/landing_sec2_fitur_symptom.svg" alt="">
+                    <div class="sec2-fitur-konten">
+                        <h2 style="font-size: 25px; transform: translateY(7px);">Symptom & Advice</h2>
+                        <p style="font-size: 16px; color: #797979; width: 360px; transform: translateY(-13px);">
+                            Common pregnancy symptoms as well as tips on how to deal with or relieve them.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Consultation -->
+                <a href="/pages/consultation.html" style="margin-top: 108px;"> 
+                    <img src="/image/landing_sec2_fitur_consultation.svg" alt="">
+                    <div class="sec2-fitur-konten">
+                        <h2 style="font-size: 25px; transform: translateY(7px);">Consultation</h2>
+                        <p style="font-size: 16px; color: #797979; width: 360px; transform: translateY(-13px);">
+                            Counseling and support is available for pregnant women facing specific problems or concerns.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            
+            
+        </div>
     </section>
 </body>
 </html>
