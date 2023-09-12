@@ -106,6 +106,12 @@ textarea {
   cursor: pointer; /* Add a pointer cursor to indicate interactivity */
 }
 
+/* Remove the outline when clicking input */
+input {
+  border: none;
+  outline: none;
+}
+
 /* Show the overflow in Edge. */
 button,
 input {
