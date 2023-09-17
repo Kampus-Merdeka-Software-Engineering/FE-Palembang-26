@@ -27,23 +27,27 @@ document.addEventListener("DOMContentLoaded", function () {
   
       if (selectedDate) {
         // Check if 'selectedDate' is a valid date (not null or undefined).
-  
+      
         // Calculate estimated date of birth (add 280 days to the selected date)
         const estimatedDateOfBirth = new Date(selectedDate);
         estimatedDateOfBirth.setDate(selectedDate.getDate() + 280);
-  
+      
         // Calculate the estimated date of birth by adding 280 days to the selected date.
         // The result is stored in 'estimatedDateOfBirth', which is a JavaScript Date object.
-  
+      
         // Display the estimated date of birth
         const formattedEstimatedDate = estimatedDateOfBirth.toLocaleDateString("en-US");
         estimatedDateContainer.textContent = `Estimated Date of Birth: ${formattedEstimatedDate}`;
-        // Display the estimated date in the 'estimatedDateContainer' element.
-  
+        
+        // Remove the 'hidden' class to display the container
+        estimatedDateContainer.classList.remove("hidden");
+      
       } else {
         // Handle invalid date input (optional)
         estimatedDateContainer.textContent = "Please select a valid date.";
-        // Display a message in the 'estimatedDateContainer' if the selected date is invalid.
+        
+        // Add the 'hidden' class to hide the container
+        estimatedDateContainer.classList.add("hidden");
       }
     });
   });

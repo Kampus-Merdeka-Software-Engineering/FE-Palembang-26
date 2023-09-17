@@ -214,6 +214,10 @@
     margin-top: 20px;
 }
 
+.hidden {
+    display: none;
+  }
+
 /* Footer */
 footer {
     height: 398px; 
