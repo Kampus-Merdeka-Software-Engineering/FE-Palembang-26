@@ -7,40 +7,44 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/login.css">
 </head>
-<body>
+<body style="position: relative;">
+    <img src="/image/login_vectorbiru.svg" style="left: 0; bottom: 0; position: absolute; z-index: 0;">
+    <img src="/image/login_vectorhijau.svg" style="right: 0; bottom: 0; position: absolute; z-index: 0;">
     <h1 style="text-align: center; font-size: 50px;">Welcome back!</h1>
     <p style="text-align: center; font-size: 30px;">Log in now, to continue</p>
 
     <div class="container">
-        <div class="image-container">
+        <div class="container-image">
             <img src="/image/login_image1.svg" class="image1">
             <img src="/image/login_image2.svg" class="image2">    
         </div>
         
-        <div style="width: 592px; height: 817px; background-color: #EFFCFA;">
-            <h1 style="text-align: center; font-size: 50px; color: #1090CB;">PROMIL</h1>
+        <div class="container-form">
+            <h1 style="font-size: 50px; color: #1090CB;">PROMIL</h1>
             <form action="">
-                <div>
-                    <p>Email Address</p>
+                <div class="container-email">
+                    <p class="email-text">Email Address</p>
                     <div class="container-input">
                         <img src="/image/login_email.svg" >
                         <input type="text" placeholder="Enter your email address">
                     </div>
-
+                </div>          
+                <div class="container-email">
+                    <p class="email-text">Password</p>
                     <div class="container-input">
-                        <img src="/image/login_password.svg" alt="">
-                        <input type="text" placeholder="Enter your password">
+                        <img src="/image/login_password.svg">
+                        <input style="transform: translateX(11px)" type="password" placeholder="Enter your password">
                     </div>
                 </div>
             </form>
 
-            <p style="text-align: center; font-size: 24px; color: #1E6ADC;">Forget Password ?</p>
+            <a href="/pages/forgotpassword.html" class="forget-password">Forget Password ?</a>
 
-            <div class="button-login">
+            <a href="/pages/index.html" class="button-login">
                 Login
-            </div>
+            </a>
 
-            <p style="text-align: center; font-size: 24px;">Don’t have an account? <a href="/pages/signup.html" style="color: #1E6ADC;">Sign Up</a></p>
+            <p style="font-size: 20px;">Don't have an account? <a href="/pages/signup.html" style="color: #1E6ADC;">Sign Up</a></p>
         </div>
     </div>
 </body>
