@@ -16,7 +16,7 @@
 
 .vertical-line {
     border-left: 2px solid #1090CB;
-    height: 45px; /* Adjust the height as needed */
+    height: 45px;
     margin-left: 38px;
   }
 
@@ -197,6 +197,24 @@
     margin-left: 14px;
 }
 
+.estimated-date-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    /* background-color: rgba(16, 144, 203, 0.1); */
+    height:67px;
+    font-size: 20px;
+    color: #787878;
+    width: 540px;
+    padding-left: 22px;
+    padding-right: 22px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Footer */
 footer {
     height: 398px; 
     padding-top: 30px;

@@ -6,6 +6,7 @@
     <title>PROMIL</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -104,16 +105,20 @@
 
     <!-- Section 3 -->
     <section class="section3">
-        <h1 style="font-size: 30px; width: 525px; text-align: center;">Get to Know Your Estimated Dated of Birth for Your Baby!</h1>
-        <!-- Input dan Submit -->
+        <h1 style="font-size: 30px; width: 525px; text-align: center;">Get to Know Your Estimated Date of Birth for Your Baby!</h1>
+        <!-- Input and Submit -->
         <div class="sec3-konten">
-            <div class="sec3-input">
-                <img src="/image/landing_sec3_date.svg" style="width: 38px; height: 39px;">
-                <input style="margin-left: 18px;" type="text" placeholder="Enter your First Day of Last Menstruation"/>
-            </div>
-            <button>Submit</button>
+          <div class="sec3-input">
+            <img src="/image/landing_sec3_date.svg" style="width: 38px; height: 39px;" id="date-picker-button">
+            <input type="text" placeholder="Select a Date" id="selected-date-input" readonly data-input style="margin-left: 15px; margin-top: 3px; ">
+          </div>
+          <button id="calculate-button">Calculate</button>
         </div>
+
+        <!-- Hasil Estimasi -->
+        <div id="estimated-date-container" class="estimated-date-container"></div>
     </section>
+  
 
     <!-- Footer -->
     <footer>
@@ -151,5 +156,8 @@
         <p style="font-size: 13px; color: #686868; margin-top: 29px;">Copyright ® 2021 Lorem All rights Rcerved</p>
          
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="/javascript/calculateBirth.js"></script>
 </body>
 </html>
