@@ -35,8 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
         // Calculate the estimated date of birth by adding 280 days to the selected date.
         // The result is stored in 'estimatedDateOfBirth', which is a JavaScript Date object.
       
+        // Format the estimated date of birth to day/month/year
+        const day = estimatedDateOfBirth.getDate();
+        const month = estimatedDateOfBirth.getMonth() + 1; // Months are 0-based, so add 1.
+        const year = estimatedDateOfBirth.getFullYear();
+
         // Display the estimated date of birth
-        const formattedEstimatedDate = estimatedDateOfBirth.toLocaleDateString("en-US");
+        const formattedEstimatedDate = `${day}/${month}/${year}`;
         estimatedDateContainer.textContent = `Estimated Date of Birth: ${formattedEstimatedDate}`;
         
         // Remove the 'hidden' class to display the container
