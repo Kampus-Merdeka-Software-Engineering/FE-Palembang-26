@@ -21,31 +21,31 @@
         
         <div class="container-form">
             <h1 style="font-size: 50px; color: #1090CB;">PROMIL</h1>
-            <form action="">
+            <form id="login-form" action="">
                 <div class="container-email">
                     <p class="email-text">Email Address</p>
                     <div class="container-input">
                         <img src="/image/login_email.svg" >
-                        <input type="text" placeholder="Enter your email address">
+                        <input id="email-input" type="text" placeholder="Enter your email address">
                     </div>
                 </div>          
                 <div class="container-email">
                     <p class="email-text">Password</p>
                     <div class="container-input">
                         <img src="/image/login_password.svg">
-                        <input style="transform: translateX(11px)" type="password" placeholder="Enter your password">
+                        <input id="password-input" type="text" placeholder="Enter your password" style="transform: translateX(11px)">
                     </div>
                 </div>
             </form>
 
             <a href="/pages/forgotpassword.html" class="forget-password">Forget Password ?</a>
 
-            <a href="/pages/index.html" class="button-login">
-                Login
-            </a>
+            <p id="error-message" style="color: red; text-align: center; font-size: 16px;"></p>
+            <button id="login-button" class="button-login">Login</button>
 
             <p style="font-size: 20px;">Don't have an account? <a href="/pages/signup.html" style="color: #1E6ADC;">Sign Up</a></p>
-        </div>
+        </div>      
     </div>
+    <script src="/javascript/validasiLogin.js"></script>
 </body>
 </html>
