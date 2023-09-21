@@ -1,0 +1,59 @@
+.container-signup {
+  width: 860px;  height: 999px; background-color: #a4d4ce 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  margin-left: 259px;
+  margin-right: 359px;
+  
+  
+}
+
+.input-signup {
+    width: 407px; 
+    height: 52px; 
+    background-color: #D9D9D9; 
+    border-radius: 44px; 
+    padding-left: 26px;
+   
+
+
+
+}
+
+.button-reset {
+    width: 214px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: #D9D9D9;
+    border-radius: 44px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 150px;
+    margin-bottom: 0px;
+    margin-left: 259px;
+}
+
+.button-submit {
+    width: 214px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: #D9D9D9;
+    border-radius: 44px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 190px;
+    margin-top: 0px;
+    margin-right: 299px;
+}
