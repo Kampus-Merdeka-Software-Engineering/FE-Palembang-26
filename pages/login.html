@@ -54,39 +54,42 @@
                     <h1 style="color: #1090cb; font-size: 55px;">PROMIL</h1>
                     
                     <!-- Input Data -->
-                    <form action="" class="form-signup">
+                    <form action="" class="form-signup" id="signup-form">
                         <div class="container-signup-input">
                             <p>Email</p> 
-                            <input type="text" class="input-signup">
+                            <input type="text" class="input-signup" id="signup-email">
                         </div> 
-
+                        
                         <div class="container-signup-input">
                             <p>Password</p>
-                            <input type="text" class="input-signup">
+                            <input type="password" class="input-signup" id="signup-password">
                         </div>
-
+                        
                         <div class="container-signup-input">
                             <p>Confirm Password</p>
-                            <input type="text" class="input-signup">
+                            <input type="password" class="input-signup" id="confirm-password">
                         </div>
                         
                         <div class="container-signup-input">
                             <p>Username</p>
-                            <input type="text" class="input-signup">
+                            <input type="text" class="input-signup" id="signup-username">
+                        </div>
+
+                        <!-- Error messages will be displayed here -->
+                        <div id="error-messages" class="error-messages"></div>
+
+                        <div class="container-signup-button">
+                            <button id="close-popup" class="button-reset">Close</button>
+                            <button id="submit-button" class="button-reset">Submit</button>
                         </div>
                     </form>
-
-                    <!-- Button -->
-                    <div class="container-signup-button">
-                        <button id="close-popup" class="button-reset">Close</a>
-                        <button><a href="/pages/submit.html" class="button-reset">Submit</a></button>
-                    </div>
                 </div>
             </div>
             <!-- Overlay -->
             <div class="overlay" id="overlay"></div>
         </div>      
     </div>
+    <script src="/javascript/validasiSignup.js"></script>
     <script src="/javascript/validasiLogin.js"></script>
     <script src="/javascript/popupsignup.js"></script>
 </body>
