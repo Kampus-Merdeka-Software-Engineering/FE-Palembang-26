@@ -5,6 +5,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const passwordInput = document.getElementById("password-input");
     const loginButton = document.getElementById("login-button");
     const errorMessage = document.getElementById("error-message");
+
+    // Local user data (simulating a database)
+    const users = [
+        {
+            email: "Billy@gmail.com",
+            password: "Admin1",
+        },
+        {
+            email: "Ula@gmail.com",
+            password: "Admin2",
+        },
+    ];
     
     loginButton.addEventListener("click", function (event) {
         // Check if email and password are empty
@@ -31,8 +43,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 event.preventDefault(); // Prevent the form from submitting
                 errorMessage.textContent = "Password must contain at least one capital letter and one number.";
             } else {
-                // Redirect to index.html
-                window.location.href = "/pages/index.html";
+
+                // CEK APAKAH DATA USER ADA DI DATABASE ATAU TIDAK
+                // Clear any previous error message
+                errorMessage.textContent = "";
+
+                // Here, you can add code to validate the username and password against your local database.
+                const enteredEmail = emailInput.value.trim();
+                const enteredPassword = passwordInput.value.trim();
+
+                const user = users.find((u) => u.email === enteredEmail && u.password === enteredPassword);
+
+                if (!user) {
+                    event.preventDefault(); // Prevent the form from submitting
+                    errorMessage.textContent = "Invalid email or password.";
+                } else {
+                    // Redirect to index.html
+                    window.location.href = "/pages/index.html";
+                }
             }
         }
     });
