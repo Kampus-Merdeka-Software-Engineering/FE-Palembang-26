@@ -1,0 +1,26 @@
+/*navbar*/
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 91px;
+    width: 100%;
+}
+
+.nav-flex-judul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 29px;
+    font-weight: bold;
+
+}
+
+.vertical-line {
+    border-left: 2px solid #1090cb;
+    height: 45px;
+    margin-left: 38px;
+}
+
+.nav-flex-atribut

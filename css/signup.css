@@ -1,5 +1,5 @@
 .container-signup {
-  width: 860px;  height: 999px; background-color: #a4d4ce 
+  width: 860px;  height: 999px; background-color: #E8F4FA;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,6 +8,7 @@
   margin-bottom: 100px;
   margin-left: 259px;
   margin-right: 359px;
+  border-radius: 66px;
   
   
 }
@@ -15,7 +16,7 @@
 .input-signup {
     width: 407px; 
     height: 52px; 
-    background-color: #D9D9D9; 
+    background-color: white; 
     border-radius: 44px; 
     padding-left: 26px;
    
@@ -36,9 +37,9 @@
     border-radius: 44px;
     font-weight: bold;
     font-size: 20px;
-    margin-top: 150px;
+    /* margin-top: 150px;
     margin-bottom: 0px;
-    margin-left: 259px;
+    margin-left: 259px; */
 }
 
 .button-submit {
@@ -53,7 +54,11 @@
     border-radius: 44px;
     font-weight: bold;
     font-size: 20px;
-    margin-bottom: 190px;
+    /* margin-bottom: 190px;
     margin-top: 0px;
-    margin-right: 299px;
+    margin-right: 299px; */
+}
+
+.body{
+    display: flex; flex-direction: row; justify-content: center;
 }
