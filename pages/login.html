@@ -6,6 +6,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/signup.css">
 </head>
 <body style="position: relative;">
     <img src="/image/login_vectorbiru.svg" style="left: 0; bottom: 0; position: absolute; z-index: 0;">
@@ -43,9 +44,50 @@
             <p id="error-message" style="color: red; text-align: center; font-size: 16px;"></p>
             <button id="login-button" class="button-login">Login</button>
 
-            <p style="font-size: 20px;">Don't have an account? <a href="/pages/signup.html" style="color: #1E6ADC;">Sign Up</a></p>
+            <!-- Button open Signup -->
+            <p style="font-size: 20px;">Don't have an account? <button id="popup-signup" style="color: #1E6ADC;">Sign Up</button></p>
+
+            <!-- Popup Signup -->
+            <div class="popup" id="popup">
+                <div class="container-signup">
+                    <img src="/image/signup_logo.svg" style="width: 169px; height: 151px;">
+                    <h1 style="color: #1090cb; font-size: 55px;">PROMIL</h1>
+                    
+                    <!-- Input Data -->
+                    <form action="" class="form-signup">
+                        <div class="container-signup-input">
+                            <p>Email</p> 
+                            <input type="text" class="input-signup">
+                        </div> 
+
+                        <div class="container-signup-input">
+                            <p>Password</p>
+                            <input type="text" class="input-signup">
+                        </div>
+
+                        <div class="container-signup-input">
+                            <p>Confirm Password</p>
+                            <input type="text" class="input-signup">
+                        </div>
+                        
+                        <div class="container-signup-input">
+                            <p>Username</p>
+                            <input type="text" class="input-signup">
+                        </div>
+                    </form>
+
+                    <!-- Button -->
+                    <div class="container-signup-button">
+                        <button id="close-popup" class="button-reset">Close</a>
+                        <button><a href="/pages/submit.html" class="button-reset">Submit</a></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Overlay -->
+            <div class="overlay" id="overlay"></div>
         </div>      
     </div>
     <script src="/javascript/validasiLogin.js"></script>
+    <script src="/javascript/popupsignup.js"></script>
 </body>
 </html>
