@@ -23,4 +23,51 @@
     margin-left: 38px;
 }
 
-.nav-flex-atribut
+.nav-flex-atribut {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 350px;
+    margin-left: 53px;
+}
+
+.judul-symptom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 64px;
+    font-weight: normal;
+    text-shadow: gray;
+    
+    
+  
+}
+.container-judul{
+    width: 1153px; height: 178px; background-color: #DBE6EB;
+    border-radius: 44px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 444px;
+    margin-top: 111px;
+}
+.container-materi{
+    width: 1888px;
+    height: 1034px;
+    background-color:#E8F4FA;
+    justify-content: center;
+    margin-top: 444px;
+}
+
+.isi-materi{
+    margin-bottom: 111px;
+    margin-left: 111px;
+    margin-top: 222px;
+    padding-top: 222px;
+    font-weight: normal;
+}
+
+
+
+
+

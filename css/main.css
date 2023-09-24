@@ -6,6 +6,7 @@
     align-items: center;
     height: 91px;
     width: 100%;
+    border-bottom: 1px solid #c4c4c4;
 }
 
 .nav-flex-judul {
