@@ -5,18 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const passwordInput = document.getElementById("password-input");
     const loginButton = document.getElementById("login-button");
     const errorMessage = document.getElementById("error-message");
-
-    // Local user data (simulating a database)
-    const users = [
-        {
-            email: "Billy@gmail.com",
-            password: "Admin1",
-        },
-        {
-            email: "Ula@gmail.com",
-            password: "Admin2",
-        },
-    ];
     
     loginButton.addEventListener("click", function (event) {
         // Check if email and password are empty
@@ -56,15 +44,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 const enteredEmail = emailInput.value.trim();
                 const enteredPassword = passwordInput.value.trim();
 
-                const user = users.find((u) => u.email === enteredEmail && u.password === enteredPassword);
+                // Retrieve the stored data from local storage
+                const storedData = JSON.parse(localStorage.getItem("formData"));
 
-                if (!user) {
+                if (storedData && storedData.email === enteredEmail && storedData.password === enteredPassword) {
+                    // Valid login credentials, redirect to index.html
+                    window.location.href = "/pages/index.html";
+                } else {
                     event.preventDefault(); // Prevent the form from submitting
                     errorMessage.textContent = "Invalid email or password.";
                     errorMessage.style.transform = "translateY(-50px)"; // Translate the error message up
-                } else {
-                    // Redirect to index.html
-                    window.location.href = "/pages/index.html";
                 }
             }
         }
