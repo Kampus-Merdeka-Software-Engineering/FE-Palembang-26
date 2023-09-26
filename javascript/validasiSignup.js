@@ -24,7 +24,6 @@ function passwordsMatch(password, confirmPassword) {
     return password === confirmPassword;
 }
 
-// Event listener for form submission
 signupForm.addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent form submission for now
 
@@ -33,6 +32,7 @@ signupForm.addEventListener('submit', function (e) {
     const passwordValid = validatePassword(passwordInput.value);
     const passwordsMatchValid = passwordsMatch(passwordInput.value, confirmPasswordInput.value);
     const usernameValid = usernameInput.value.trim() !== '';
+    const usernameLengthValid = usernameInput.value.length <= 15;
 
     // Clear existing error messages
     errorMessages.innerHTML = '';
@@ -42,6 +42,25 @@ signupForm.addEventListener('submit', function (e) {
     displayErrorMessage('password', !passwordValid, 'Password must contain at least one capital letter and one number.');
     displayErrorMessage('confirm-password', !passwordsMatchValid, 'Passwords do not match.');
     displayErrorMessage('username', !usernameValid, 'Please enter a username.');
+    displayErrorMessage('username-length', !usernameLengthValid, 'Username should not exceed 15 characters.');
+
+    if (emailValid && passwordValid && passwordsMatchValid && usernameValid && usernameLengthValid) {
+        // All validations passed, save data in local storage
+        const formData = {
+            email: emailInput.value,
+            password: passwordInput.value,
+            username: usernameInput.value
+        };
+
+        // Convert formData to JSON string and save it in local storage
+        localStorage.setItem('formData', JSON.stringify(formData));
+
+        // Close the popup (you can modify this part based on your actual popup implementation)
+        const popup = document.getElementById('popup');
+        popup.style.display = 'none'; // Assuming 'none' hides the popup
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'none'; // Assuming 'none' hides the popup
+    }
 });
 
 // Function to display error messages
