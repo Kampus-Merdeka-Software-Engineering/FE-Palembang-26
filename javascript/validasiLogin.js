@@ -23,9 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (emailInput.value.trim() === "" || passwordInput.value.trim() === "") {
             event.preventDefault(); // Prevent the form from submitting
             errorMessage.textContent = "Please fill in both email and password correctly.";
+            errorMessage.style.transform = "translateY(-50px)"; // Translate the error message up
         } else {
             // Clear any previous error message
             errorMessage.textContent = "";
+            errorMessage.style.transform = "translateY(0)"; // Reset the error message position
 
             // Here, you can add code to validate the username and password.
             // If they are valid, you can redirect to index.html.
@@ -39,14 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!emailFormat.test(emailInput.value)) {
                 event.preventDefault(); // Prevent the form from submitting
                 errorMessage.textContent = "Please enter a valid email address.";
+                errorMessage.style.transform = "translateY(-50px)"; // Translate the error message up
             } else if (!passwordFormat.test(passwordInput.value)) {
                 event.preventDefault(); // Prevent the form from submitting
                 errorMessage.textContent = "Password must contain at least one capital letter and one number.";
+                errorMessage.style.transform = "translateY(-50px)"; // Translate the error message up
             } else {
-
                 // CEK APAKAH DATA USER ADA DI DATABASE ATAU TIDAK
                 // Clear any previous error message
                 errorMessage.textContent = "";
+                errorMessage.style.transform = "translateY(0)"; // Reset the error message position
 
                 // Here, you can add code to validate the username and password against your local database.
                 const enteredEmail = emailInput.value.trim();
@@ -57,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (!user) {
                     event.preventDefault(); // Prevent the form from submitting
                     errorMessage.textContent = "Invalid email or password.";
+                    errorMessage.style.transform = "translateY(-50px)"; // Translate the error message up
                 } else {
                     // Redirect to index.html
                     window.location.href = "/pages/index.html";
