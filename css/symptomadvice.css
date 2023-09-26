@@ -121,31 +121,6 @@
     font-size: 28px;
 }
 
-/* Footer */
-footer {
-    height: 398px; 
-    padding-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer-konten {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-footer p {
-    font-size: 16px;
-    color: #515151;
-}
-
-footer h1 {
-    font-size:17px;
-}
-
 
 
 

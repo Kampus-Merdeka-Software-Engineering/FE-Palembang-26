@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="/css/signup.css">
 </head>
 <body style="position: relative;">
-    <img src="/image/login_vectorbiru.svg" style="left: 0; bottom: 0; position: absolute; z-index: 0;">
-    <img src="/image/login_vectorhijau.svg" style="right: 0; bottom: 0; position: absolute; z-index: 0;">
+    <img src="/image/login_vectorbiru.svg" class="vector-biru">
+    <img src="/image/login_vectorhijau.svg" class="vector-hijau">
     <h1 style="text-align: center; font-size: 50px;">Welcome back!</h1>
     <p style="text-align: center; font-size: 30px;">Log in now, to continue</p>
 
@@ -22,7 +22,7 @@
         
         <div class="container-form">
             <h1 style="font-size: 50px; color: #1090CB;">PROMIL</h1>
-            <form id="login-form" action="">
+            <form id="login-form" action="" style="transform: translateY(-45px);">
                 <div class="container-email">
                     <p class="email-text">Email Address</p>
                     <div class="container-input">
@@ -45,7 +45,7 @@
             <button id="login-button" class="button-login">Login</button>
 
             <!-- Button open Signup -->
-            <p style="font-size: 20px;">Don't have an account? <button id="popup-signup" style="color: #1E6ADC;">Sign Up</button></p>
+            <p style="font-size: 20px; transform: translateY(-40px);">Don't have an account? <button id="popup-signup" style="color: #1E6ADC;">Sign Up</button></p>
 
             <!-- Popup Signup -->
             <div class="popup" id="popup">
