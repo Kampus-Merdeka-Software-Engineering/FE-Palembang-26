@@ -14,6 +14,7 @@
     align-items: center;
     font-size: 29px;
     font-weight: bold;
+    font-family: 'poppins-bold', sans-serif !important;
 
 }
 
@@ -30,41 +31,49 @@
     justify-content: space-evenly;
     width: 350px;
     margin-left: 53px;
+    font-family: 'poppins-bold', sans-serif !important;
 }
 
 .judul-symptom {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 64px;
-    font-weight: normal;
-    text-shadow: gray;
-    
-    
-  
+    font-size: 90px;
+    font-weight: 500;
+    font-family: 'poppins-bold', sans-serif !important;
+    padding-top: 55px;
+
 }
 .container-judul{
-    width: 1153px; height: 178px; background-color: #DBE6EB;
+    width: 946px; height: 155px; background-color: #DBE6EB;
     border-radius: 44px;
     justify-content: center;
     text-align: center;
     margin-left: 444px;
     margin-top: 111px;
 }
+.container-gambar{
+    width: 1940px; height: 450px; background-color: #d3e9f3;
+    margin-top: 88px;
+    padding-bottom: 199px;
+    
+
+}
 .container-materi{
     width: 1888px;
-    height: 1034px;
-    background-color:#E8F4FA;
+    height: 1444px;
+    background-color:white;
     justify-content: center;
-    margin-top: 444px;
+    font-weight: normal;
 }
 
 .isi-materi{
     margin-bottom: 111px;
     margin-left: 111px;
     margin-top: 222px;
-    padding-top: 222px;
+    padding-top: 10px;
     font-weight: normal;
+    font-family: 'poppins-bold', sans-serif !important;
 }
 
 
