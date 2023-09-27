@@ -44,8 +44,8 @@
 }
 
 .navbar a button {
-    width: 99px;
-    height: 25px;
+    width: 100px;
+    height: 38px;
     background-color: #1090CB;
     border-radius: 6px;
     color: white;
@@ -74,30 +74,18 @@
     color: #5C5C5C;
 }
 
-.sec1-button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-top: 50px;
-}
-
-.sec1-button button {
-    width: 193px;
-    height: 51px;
-    border-radius: 10px;
-}
-
 .sec1-contactus {
     background-color: #1090CB;
     color: white;
     font-size: 16px;
-}
-
-.sec1-viewmore {
-    background-color: white;
-    border: 1px solid #1090CB;
-    color: #1090CB;
-    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    width: 180px;
+    height: 51px;
+    border-radius: 10px;
 }
 
 .sec1-image {
@@ -204,6 +192,7 @@
     justify-content: center;
     align-items: center;
     background-color: white;
+    text-align: center;
     /* background-color: rgba(16, 144, 203, 0.1); */
     height:67px;
     font-size: 20px;
