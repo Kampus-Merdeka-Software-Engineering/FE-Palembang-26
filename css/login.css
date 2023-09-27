@@ -81,13 +81,13 @@
     flex-direction: row;
     align-items: center;
     background-color: white;
-    padding-left: 26px;
+    padding-left: 16px;
     border-radius: 11px;
     transform: translateY(-15px)
 }
 
 .container-email {
-    width: 404px;
+    width: 483px;
     display: flex;
     flex-direction: column;
 }
