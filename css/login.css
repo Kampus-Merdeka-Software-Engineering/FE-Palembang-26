@@ -13,6 +13,8 @@
     height: 45px;
     border-radius: 11px;
     transform: translateX(20%);
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .vector-hijau {

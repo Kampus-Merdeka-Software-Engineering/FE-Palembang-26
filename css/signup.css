@@ -22,15 +22,11 @@
     z-index: 2;
 }
 
-.container-signup {
-  width: 650px; 
-  height: 799px; 
-  background-color: #E8F4FA;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: bold;
-  border-radius: 66px;
+.container-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: cennter;
 }
 
 .form-signup {
@@ -40,12 +36,23 @@
     gap: 14px;
 }
 
+.container-signup {
+  width: 988px; 
+  height: 583px; 
+  background-color: #E8F4FA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 66px;
+}
+
 .container-signup-input {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 550px;
+    width: 781px;
     height: 40px;
 }
 
@@ -54,7 +61,7 @@
 }
 
 .input-signup {
-    width: 307px; 
+    width: 436px; 
     height: 39px; 
     background-color: white; 
     border-radius: 44px; 
@@ -67,8 +74,8 @@
     flex-direction: row; 
     align-items: center; 
     justify-content: space-between;
-    margin-top: 115px;
-    width: 491px;
+    margin-top: 120px;
+    width: 712px;
 }
 
 .button-reset {
@@ -91,6 +98,9 @@
     align-items: flex-start;
     color: red;
     font-size: 12px;
+    position: absolute;
+    transform: translateY(220px);
+
 }
 
 .error-message {
