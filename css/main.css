@@ -59,6 +59,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
 }
 
 .sec1-konten {
@@ -94,6 +95,11 @@
     padding: 0 26px 42px 0;
 }
 
+.sec1-imageelips {
+    position: absolute;
+    z-index: -1;
+}
+
 /* Section 2 */
 .section2 {
     padding-top:42px;
@@ -114,6 +120,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    position: relative;
 }
 
 .sec2-fitur a {
@@ -128,6 +135,13 @@
     padding-left: 27px
 }
 
+.sec2-vector-pot {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(-50px) translateY(-50%);
+}
+
 /* Section 3 */
 .section3 {
     margin-top: 40px;
@@ -138,6 +152,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .sec3-konten {
@@ -207,6 +222,19 @@
 .hidden {
     display: none;
   }
+
+.sec3-star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(50%) translateY(-50%);
+}
+
+.sec3-pie {
+    position: absolute;
+    right: 0;
+    transform: translateX(-345px) translateY(-50%);
+}
 
 /* Footer */
 footer {
