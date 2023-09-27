@@ -1,0 +1,48 @@
+.container-judul {
+    width: 1284px; height: 207px; background-color: #DBE6EB;
+    border-radius: 44px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 744px;
+    margin-top: 11px;
+}
+
+.title-pertama {
+    text-align: left;
+    width: 1444px;
+    height: 207px;
+    background-color: aqua;
+    margin-left: 999px; 
+    color: #1090CB; font-size: 10px; font-family: 'poppins-bold', sans-serif !important;
+}
+
+.container-pertama {
+    text-align: center;
+    width: 1440px; height: 499px; background-color: #d3e9f3;
+}
+    
+/* Footer */
+footer {
+    height: 398px; 
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-konten {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer p {
+    font-size: 16px;
+    color: #515151;
+}
+
+footer h1 {
+    font-size:17px;
+}
+   
