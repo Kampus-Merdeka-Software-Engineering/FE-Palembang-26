@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/signup.css">
 </head>
-<body style="position: relative;">
+<body style="position: relative; overflow-x: hidden;">
+    <a href="/pages/index.html"><button class="login-navigation">Back</button></a>
+
     <img src="/image/login_vectorbiru.svg" class="vector-biru">
     <img src="/image/login_vectorhijau.svg" class="vector-hijau">
     <h1 style="text-align: center; font-size: 50px;">Welcome back!</h1>
     <p style="text-align: center; font-size: 30px;">Log in now, to continue</p>
 
     <div class="container">
+        <!-- Image -->
         <div class="container-image">
             <img src="/image/login_image1.svg" class="image1">
             <img src="/image/login_image2.svg" class="image2">    
@@ -23,6 +26,7 @@
         <div class="container-form">
             <h1 style="font-size: 50px; color: #1090CB;">PROMIL</h1>
             <form id="login-form" action="" style="transform: translateY(-45px);">
+                <!-- Input Email -->
                 <div class="container-email">
                     <p class="email-text">Email Address</p>
                     <div class="container-input">
@@ -30,6 +34,7 @@
                         <input id="email-input" type="text" placeholder="Enter your email address">
                     </div>
                 </div>
+                <!-- Input Password -->
                 <div class="container-email">
                     <p class="email-text">Password</p>
                     <div class="container-input">
@@ -39,7 +44,7 @@
                 </div>
             </form>
             
-            <a href="/pages/forgotpassword.html" class="forget-password">Forget Password ?</a>
+            <a href="#" class="forget-password">Forget Password ?</a>
             
             <p id="error-message" style="color: red; text-align: center; font-size: 16px;"></p>
             <button id="login-button" class="button-login">Login</button>
@@ -50,8 +55,10 @@
             <!-- Popup Signup -->
             <div class="popup" id="popup">
                 <div class="container-signup">
-                    <img src="/image/signup_logo.svg" style="width: 169px; height: 151px;">
-                    <h1 style="color: #1090cb; font-size: 55px;">PROMIL</h1>
+                    <div class="container-logo">
+                        <img src="/image/landing_logo.svg" style="width: 135px; height: 87px;">
+                        <h1 style="color: #1090cb; font-size: 55px;">PROMIL</h1>
+                    </div>
                     
                     <!-- Input Data -->
                     <form action="" class="form-signup" id="signup-form">

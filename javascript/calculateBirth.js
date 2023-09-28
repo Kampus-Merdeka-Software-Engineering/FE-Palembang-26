@@ -28,6 +28,32 @@ document.addEventListener("DOMContentLoaded", function () {
       if (selectedDate) {
         // Check if 'selectedDate' is a valid date (not null or undefined).
       
+        // Define arrays to map numeric values to textual representations
+        const daysOfWeek = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+
+      const monthsOfYear = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+
         // Calculate estimated date of birth (add 280 days to the selected date)
         const estimatedDateOfBirth = new Date(selectedDate);
         estimatedDateOfBirth.setDate(selectedDate.getDate() + 280);
@@ -36,13 +62,21 @@ document.addEventListener("DOMContentLoaded", function () {
         // The result is stored in 'estimatedDateOfBirth', which is a JavaScript Date object.
       
         // Format the estimated date of birth to day/month/year
-        const day = estimatedDateOfBirth.getDate();
-        const month = estimatedDateOfBirth.getMonth() + 1; // Months are 0-based, so add 1.
+        const dayOfWeek = daysOfWeek[selectedDate.getDay()];
+        const monthOfYear = monthsOfYear[selectedDate.getMonth()];
         const year = estimatedDateOfBirth.getFullYear();
 
+        // Calculate the week of pregnancy
+        const currentDate = new Date();
+        const timeDifference = Math.abs(selectedDate - currentDate);
+        const daysOfPregnancy = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const weeksOfPregnancy = Math.floor(daysOfPregnancy / 7);
+
         // Display the estimated date of birth
-        const formattedEstimatedDate = `${day}/${month}/${year}`;
-        estimatedDateContainer.textContent = `Estimated Date of Birth: ${formattedEstimatedDate}`;
+        const formattedEstimatedDate = `${dayOfWeek}, ${selectedDate.getDate()} ${monthOfYear}, ${year}`;
+        // estimatedDateContainer.textContent = `Estimated Date of Birth: ${formattedEstimatedDate}`;
+        // const weekOfPregnancy = `Week of Pregnancy: ${weeksOfPregnancy}`;
+        estimatedDateContainer.textContent = `Estimated Date of Birth: ${formattedEstimatedDate}\n Week - ${weeksOfPregnancy}`;
         
         // Remove the 'hidden' class to display the container
         estimatedDateContainer.classList.remove("hidden");

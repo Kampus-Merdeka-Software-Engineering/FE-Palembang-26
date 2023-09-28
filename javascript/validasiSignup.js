@@ -24,6 +24,11 @@ function passwordsMatch(password, confirmPassword) {
     return password === confirmPassword;
 }
 
+function validateUsername(username) {
+    const usernameFormat = /^[a-zA-Z0-9]+$/;
+    return usernameFormat.test(username);
+}
+
 signupForm.addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent form submission for now
 
@@ -31,17 +36,19 @@ signupForm.addEventListener('submit', function (e) {
     const emailValid = validateEmail(emailInput.value);
     const passwordValid = validatePassword(passwordInput.value);
     const passwordsMatchValid = passwordsMatch(passwordInput.value, confirmPasswordInput.value);
-    const usernameValid = usernameInput.value.trim() !== '';
+    const usernameValid = validateUsername(usernameInput.value);
     const usernameLengthValid = usernameInput.value.length <= 15;
 
     // Clear existing error messages
     errorMessages.innerHTML = '';
-
+    
     // Display error messages
     displayErrorMessage('email', !emailValid, 'Please enter a valid email address.');
     displayErrorMessage('password', !passwordValid, 'Password must contain at least one capital letter and one number.');
     displayErrorMessage('confirm-password', !passwordsMatchValid, 'Passwords do not match.');
-    displayErrorMessage('username', !usernameValid, 'Please enter a username.');
+    if (!usernameValid) {
+        displayErrorMessage('username', !usernameValid, 'Username can only contain letters and numbers.');
+    }
     displayErrorMessage('username-length', !usernameLengthValid, 'Username should not exceed 15 characters.');
 
     if (emailValid && passwordValid && passwordsMatchValid && usernameValid && usernameLengthValid) {

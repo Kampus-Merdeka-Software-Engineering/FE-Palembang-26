@@ -1,3 +1,22 @@
+.login-navigation {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #1E6ADC;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 126px;
+    height: 45px;
+    border-radius: 11px;
+    transform: translateX(20%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .vector-hijau {
     right: 0; 
     bottom: 0; 
@@ -62,13 +81,13 @@
     flex-direction: row;
     align-items: center;
     background-color: white;
-    padding-left: 26px;
+    padding-left: 16px;
     border-radius: 11px;
     transform: translateY(-15px)
 }
 
 .container-email {
-    width: 404px;
+    width: 483px;
     display: flex;
     flex-direction: column;
 }

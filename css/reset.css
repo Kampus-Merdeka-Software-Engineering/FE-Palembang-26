@@ -1,23 +1,25 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
 /* Correct the line height in all browsers. Prevent adjustments of font size after orientation changes in iOS. */
 html {
-    line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-  }
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
 
 /* Remove the margin in all browsers. */
 body {
   margin: 0;
-  font-family: "Poppins", Arial, sans-serif;
+  /* font-family: 'Manrope', sans-serif; */
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Render the main element consistently in IE. */
 main {
-    display: block;
-  }
+  display: block;
+}
 
 /* Correct the font size and margin on h1 elements within section and article contexts in Chrome, Firefox, and Safari. */
 h1 {
-  font-size: 2em;
   margin: 0.67em 0;
 }
 

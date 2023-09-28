@@ -1,56 +1,3 @@
-/* NAVBAR */
-.navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 91px;
-    width: 100%;
-    border-bottom: 1px solid #c4c4c4;
-}
-
-.nav-flex-judul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.vertical-line {
-    border-left: 2px solid #1090CB;
-    height: 45px;
-    margin-left: 38px;
-  }
-
-.nav-flex-atribut {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 350px;
-    margin-left: 53px;
-}
-
-.nav-flex-judul a {
-    font-size: 16px;
-}
-
-.nav-flex-log {
-    width: 179px;
-    margin-right: 56px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar a button {
-    width: 99px;
-    height: 25px;
-    background-color: #1090CB;
-    border-radius: 6px;
-    color: white;
-}
-
 /* JUDUL SYMPTOM */
 .judul-symptom {
     display: flex;
@@ -65,7 +12,10 @@
     background-color: #DBE6EB;
     border-radius: 44px;
     margin: 0 auto;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     font-size: 90px;
     font-weight: 500;
     position: relative;

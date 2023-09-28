@@ -6,9 +6,10 @@
     <title>PROMIL</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
-<body>
+<body style="overflow-x: hidden;">
     <!-- Navbar -->
     <nav class="navbar">
         <!-- Logo dan Judul -->
@@ -18,9 +19,9 @@
             <div class="vertical-line"></div>
             <!-- Atribut -->
             <div class="nav-flex-atribut">
-                <a href="/pages/index.html">Home</a>
-                <a href="/pages/aboutus.html">About us</a>
-                <a href="/pages/services.html">Services</a>
+                <a href="/pages/index.html" id="home-link">Home</a>
+                <a href="/pages/aboutus.html" id="about-link">About us</a>
+                <a href="/pages/services.html" id="services-link">Services</a>
             </div>  
         </div>
         <!-- Login dan Search-->
@@ -41,10 +42,13 @@
             <!-- Button -->
             <div class="sec1-button">
                 <a href="/pages/contactus.html"><button class="sec1-contactus">Contact Us</button></a>
-                <button class="sec1-viewmore">View more</button>
             </div>
         </div>
         <img src="/image/landing_sec1_image.svg" class="sec1-image">
+        <!-- Vector -->
+        <img src="/image/landing_sec1_imageelips.svg" class="sec1-imageelips">
+        <img src="/image/landing_vectorbiru.svg" class="sec1-imageelips" style="right:0; transform:translateY(87px); z-index: 0;"">
+        <img src="/image/landing_vectorhijau.svg" class="sec1-imageelips" style="transform:translateY(220px); z-index: 0;">
     </section>
 
     <!-- Section 2 -->
@@ -54,7 +58,7 @@
         <div class="sec2-fitur">
             <div style="display: flex; flex-direction: column;">
                 <!-- Stage of Pregnancy -->
-                <a href="/pages/stagepreg.html">
+                <a href="/pages/stageofpregnancy.html">
                     <img src="/image/landing_sec2_fitur_stage.svg" alt="">
                     <div class="sec2-fitur-konten">
                         <h1 style="font-size: 25px; transform: translateY(7px);">Stage of Pregnancy</h1>
@@ -99,17 +103,22 @@
                     </div>
                 </a>
             </div>
+            <!-- Vector Pot -->
+            <img src="/image/landing_vectorpot.svg" class="sec2-vector-pot">
         </div>
     </section>
 
     <!-- Section 3 -->
     <section class="section3">
+        <!-- Vector bintang -->
+        <img src="/image/symptom_Star 1.svg" class="sec3-star">
+        <img src="/image/landing_vectorpie.svg" class="sec3-pie">
         <h1 style="font-size: 30px; width: 525px; text-align: center;">Get to Know Your Estimated Date of Birth for Your Baby!</h1>
         <!-- Input and Submit -->
         <div class="sec3-konten">
           <div class="sec3-input">
             <img src="/image/landing_sec3_date.svg" style="width: 38px; height: 39px;" id="date-picker-button">
-            <input type="text" placeholder="Select a Date" id="selected-date-input" readonly data-input style="margin-left: 15px; margin-top: 3px; ">
+            <input type="text" placeholder="Enter your First Day of Last Menstruation" id="selected-date-input" readonly data-input style="margin-left: 15px; margin-top: 3px; ">
           </div>
           <button id="calculate-button">Calculate</button>
         </div>
@@ -143,7 +152,7 @@
                 <p style="padding-top: 20px;">+62 857 4374 8914</p>
             </div>
             <!-- Sosial Media -->
-            <div style="margin-top:115px;">
+            <div class="footer-sosmed">
                 <img src="/image/landing_footer_facebook.svg" alt="">
                 <img src="/image/landing_footer_instagram.svg" alt="">
                 <img src="/image/landing_footer_twitter.svg" alt="">
@@ -156,6 +165,7 @@
          
     </footer>
 
+    <script src="/javascript/navigationNavbar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="/javascript/calculateBirth.js"></script>
 </body>
