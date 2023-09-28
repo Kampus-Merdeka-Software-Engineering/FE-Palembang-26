@@ -1,0 +1,98 @@
+
+
+.container-chat {
+  width: 988px; 
+  height: 677px; 
+  background-color: #E7F4FA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 66px;
+  position: absolute; right: 499px; top: 199px;
+}
+
+.container-Nama {
+    width: 437px;
+    height: 45px;
+    background-color: white;
+    border-radius: 44px;
+    margin-top: 15px;
+    
+}
+
+.container-TTL {
+    width: 437px;
+    height: 45px;
+    background-color: white;
+    border-radius: 44px;
+    margin-top: 15px;
+    
+}
+
+.container-usia {
+    width: 437px;
+    height: 45px;
+    background-color: white;
+    border-radius: 44px;
+    margin-top: 19px;
+    
+}
+
+.container-riwayat {
+    width: 437px;
+    height: 45px;
+    background-color: white;
+    border-radius: 44px;
+    margin-top: 21px;
+    
+    
+}
+
+.container-pertanyaan {
+    width: 437px;
+    height: 115px;
+    background-color: white;
+    border-radius: 44px;
+    margin-top: 21px;
+
+    
+}
+
+.container-pembayaran {
+    width: 437px;
+    height: 45px;
+    background-color: white;
+    border-radius: 44px;
+    margin-top: 25px;
+    
+}
+.button-reset {
+    width: 214px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: #D9D9D9;
+    border-radius: 44px;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute; top: 600px; left: 55px;
+}
+
+.button-send {
+    width: 214px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: #D9D9D9;
+    border-radius: 44px;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute; top: 600px; left: 695px;
+}
