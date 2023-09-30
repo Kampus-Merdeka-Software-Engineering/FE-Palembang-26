@@ -70,14 +70,65 @@ function createContactCard(specialist) {
         <button class="button-chat">Chat</button>
     `;
 
+    // Add an event listener to the "Chat" button
+    const chatButton = card.querySelector('.button-chat');
+    chatButton.addEventListener('click', () => {
+        // Open the consultation form with doctor's name
+        openConsultationForm(specialist.name);
+    });
     return card;
 }
 
-// Get the container for contact cards
-const containerContact = document.querySelector('.container-contact');
+// Function to open the consultation form
+function openConsultationForm(doctorName) {
+    const consultationPopup = document.getElementById('consultation-popup');
+    const overlay = document.getElementById('overlay');
+    consultationPopup.style.display = 'block';
+    overlay.style.display = 'block';
 
-// Generate contact cards and append them to the container
-specialists.forEach(specialist => {
-    const contactCard = createContactCard(specialist);
-    containerContact.appendChild(contactCard);
+    // Set the doctor's name in the form
+    const doctorNameField = consultationPopup.querySelector('#doctor-name');
+    doctorNameField.textContent = doctorName;
+
+    // Handle form submission
+    const consultationForm = consultationPopup.querySelector('#consultation-form');
+    consultationForm.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the form from submitting
+        // Access the form fields and their values
+        const formData = new FormData(consultationForm);
+        // Append the doctor's name to the form data
+        formData.append('doctorName', doctorName);
+
+        // Convert form data to a JavaScript object
+        const formDataObject = {};
+        formData.forEach((value, key) => {
+            formDataObject[key] = value;
+        });
+
+        // Save the form data to localStorage
+        localStorage.setItem(doctorName, JSON.stringify(formDataObject));
+
+        // You can now submit the formData to your server or process it as needed
+        console.log('Form Data:', formData);
+        // Close the consultation form
+        consultationPopup.style.display = 'none';
+        overlay.style.display = 'none';
+
+        // Clear the form fields after submission if needed
+        consultationForm.reset();
+    });
+
+    // Add an event listener to close the consultation form
+    const closeButton = consultationPopup.querySelector('#close-consultation-popup');
+    closeButton.addEventListener('click', () => {
+        consultationPopup.style.display = 'none'; // Close the popup
+        overlay.style.display = 'none';
+    });
+}
+
+// Generate and append doctor cards to the container
+const doctorsContainer = document.querySelector('.container-doctors');
+specialists.forEach((specialist) => {
+    const card = createContactCard(specialist);
+    doctorsContainer.appendChild(card);
 });

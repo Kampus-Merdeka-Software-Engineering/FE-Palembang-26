@@ -8,6 +8,7 @@
     <title>Consultation</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/consultation.css">
+    <link rel="stylesheet" href="/css/chat.css">
     <link rel="stylesheet" href="/css/main.css">
    
 
@@ -68,7 +69,7 @@
 
 
     <!--contact-->
-    <div class="container-contact">
+    <div class="container-doctors">
         <!-- MENGGUNAKAN JAVASCRIPT UNTUK MEMBUAT KONTAK DOKTER -->
         <!-- HTML DIBAWAH SUDAH TIDAK DIPERLUKAN, HANYA SEBAGAI HIASAN -->
         <!--
@@ -100,8 +101,66 @@
             <button class="button-chat">Chat</button>
         </div> -->
     </div>
- 
- 
+
+    <div id="doctor-popup" class="popup">
+        <!-- The content of your popup will be inserted here using JavaScript -->
+    </div>
+
+    <div id="consultation-popup" class="popup">
+        <div class="container-chat">
+            <!-- Add a field for the doctor's name -->
+            <h2>Consultation with <span id="doctor-name"></span></h2>
+    
+            <form id="consultation-form" action="#" class="consultation-form">
+                <!-- Nama -->
+                <div class="container-input">
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" name="nama" placeholder="Billy Fahd Qodama">
+                </div>
+    
+                <!-- TTL -->
+                <div class="container-input" style="transform: translateY(-35px);">
+                    <label for="ttl">TTL</label>
+                    <input type="date" id="ttl" name="ttl">
+                </div>
+    
+                <!-- Usia Kehamilan -->
+                <div class="container-input" style="transform: translateY(-70px);">
+                    <label for="usiaKehamilan">Usia Kehamilan</label>
+                    <input type="number" id="usiaKehamilan" name="usiaKehamilan" placeholder="Minggu ke - ">
+                </div>
+    
+                <!-- Riwayat Penyakit -->
+                <div class="container-input" style="transform: translateY(-80px);">
+                    <label for="riwayatPenyakit" style="width: 339px;">Riwayat Penyakit</label>
+                    <textarea id="riwayatPenyakit" name="riwayatPenyakit"></textarea>
+                </div>
+    
+                <!-- Pembayaran Via -->
+                <div class="container-input" style="transform: translateY(-90px);">
+                    <label for="pembayaranVia" style="transform: translateX(-10px);">Pembayaran Via</label>
+                    <select id="pembayaranVia" name="pembayaranVia">
+                        <option value="qris">Qris</option>
+                        <option value="bni">BNI</option>
+                        <option value="mandiri">Mandiri</option>
+                        <option value="bca">BCA</option>
+                        <option value="bri">BRI</option>
+                        <option value="bsi">BSI</option>
+                    </select>
+                </div>
+    
+                <input type="hidden" id="doctorName" name="doctorName" value="">
+
+                <div class="container-button">
+                    <button class="button-reset" id="close-consultation-popup">Close</button>
+                    <button type="submit" class="button-send">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>    
+    
     <!-- Footer -->
     <footer>
         <div class="footer-konten">
