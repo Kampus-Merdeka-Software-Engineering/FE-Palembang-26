@@ -32,21 +32,114 @@
 
 /*penjelasan*/
 .container-penjelasan {
-    width: 1311px;
-    height: 399px;
+    width: 100%; 
+    height: 396px; 
     background-color: #d3e9f3;
+    margin-top: 34px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.isi-penjelasan {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.isi-penjelasan p {
+    font-size: 25px;
+    margin-left: 50px;
 }
 
 
-
+/* CONTACT */
 .container-contact {
-    width: 1688px;
-    height: 1112px;
-    background-color: white;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    position: absolute; left: 154px; top: 955px;
-
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 23px;
+    padding: 10px;
+    border-radius: 10px;
 }
+
+.card-contact {
+    width: 536px;
+    height: 191px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    border-right: 5px solid #ccc;
+}
+
+.card-contact img {
+    width: 150px;
+    height: 150px;
+}
+
+.isi-contact {
+    display: flex;
+    flex-direction: column;
+    margin-left: 22px;
+    transform: translateY(10px);
+}
+
+.spesialis {
+    font-size: 16px;
+    color: #797979;
+    transform: translateY(-30px)
+}
+
+.flex-exp-rate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    transform: translateY(-30px)
+}
+
+.container-exp-rate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #EEEEEE;
+    height: 18px;
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.container-exp-rate p {
+    font-size: 10px;
+    color: #2B2929;
+    margin-left: 8px;
+}
+
+.button-chat {
+    width: 72px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #1090CB;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateX(-40px) translateY(-20px);
+}
+
 
 /* Footer */
 .footer {
