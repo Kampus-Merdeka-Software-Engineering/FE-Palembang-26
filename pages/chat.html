@@ -9,73 +9,53 @@
 </head>
 <body>
     <div class="container-chat">
-        <img src="/image/logo trans.svg" style="position: absolute; right: 611px; top: 43px;">
-        <h1 style="color: #1090cb; font-size: 50px;">PROMIL</h1>
-        
-        
-
-<!--nama-->
-        <div class="type-Nama">
-            <div class="container-Nama">
-                <p style="font-size: 22px; font-weight: bold; position: absolute; left: 79px; top: 125px;">Nama</p> 
-                <input type="text">
-             </div>
-
+        <div class="container-logo">
+            <img src="/image/landing_logo.svg" style="width: 135px; height: 87px;">
+            <h1 style="color: #1090cb; font-size: 55px;">PROMIL</h1>
         </div>
+        
+        <form action="">
+            <!-- Nama -->
+            <div class="container-input">
+                <p>Nama</p>
+                <input type="text">
+            </div>
 
-<!--TTL-->
-<div class="type-TTL">
-    <div class="container-TTL">
-        <p style="font-size: 22px; font-weight: bold; position: absolute; left: 79px; top: 185px;">TTL</p> 
-        <input type="text">
-     </div>
+            <!-- TTL -->
+            <div class="container-input" style="transform: translateY(-35px);">
+                <p>TTL</p>
+                <input type="date">
+            </div>
 
-</div>
+            <!-- Usia Kehamilan -->
+            <div class="container-input" style="transform: translateY(-70px);">
+                <p>Usia Kehamilan</p>
+                <input type="text">
+            </div>
 
-<!--Usia Kehamilan-->
-<div class="type-usia">
-    <div class="container-usia">
-        <p style="font-size: 22px; font-weight: bold; position: absolute; left: 79px; top: 255px;">Usia kehamilan</p> 
-        <input type="text">
-     </div>
+            <!-- Riwayat Penyakit -->
+            <div class="container-input" style="transform: translateY(-80px);">
+                <p>Riwayat Penyakit</p>
+                <textarea></textarea>
+            </div>
 
-</div>
+            <!-- Pembayaran Via -->
+            <div class="container-input" style="transform: translateY(-90px);">
+                <p>Pembayaran Via</p>
+                <select>
+                    <option value="qris">Qris</option>
+                    <option value="bni">BNI</option>
+                    <option value="mandiri">Mandiri</option>
+                    <option value="bca">BCA</option>
+                    <option value="bri">BRI</option>
+                    <option value="bsi">BSI</option>
+                </select>
+            </div>
+        </form>
 
-<!--Riwayat Penyakit-->
-<div class="type-riwayat">
-    <div class="container-riwayat">
-        <p style="font-size: 22px; font-weight: bold; position: absolute; left: 79px; top: 315px;">Riwayat Penyakit</p> 
-        <input type="text">
-     </div>
-
-</div>
-
-<!--Pertanyaan-->
-<div class="type-pertanyaan">
-    <div class="container-pertanyaan">
-        <p style="font-size: 22px; font-weight: bold; position: absolute; left: 79px; top: 375px;">Pertanyaan</p> 
-        <input type="text">
-     </div>
-
-</div>
-
-<!--Pembayaran-->
-<div class="type-pembayaran">
-    <div class="container-pembayaran">
-        <p style="font-size: 22px; font-weight: bold; position: absolute; left: 79px; top: 511px;">Pembayaran Via</p> 
-        <input type="text">
-     </div>
-
-</div>
-
-
-
-
-
-        <div style="display: flex; flex-direction: row; align-items: center; 
-        margin-top: 150px;">
-            <a href="/pages/reset.html" class="button-reset">Reset</a>
-            <a href="/pages/submit.html" class="button-send">Send</a>
+        <div class="container-button">
+            <a href="#" class="button-reset">Reset</a>
+            <a href="#" class="button-send">Send</a>
         </div>
     </div>
 </body>

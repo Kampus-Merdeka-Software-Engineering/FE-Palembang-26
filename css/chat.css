@@ -1,72 +1,79 @@
-
-
 .container-chat {
-  width: 988px; 
-  height: 677px; 
-  background-color: #E7F4FA;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: bold;
-  border-radius: 66px;
-  position: absolute; right: 499px; top: 199px;
+    width: 988px; 
+    height: 677px; 
+    background-color: #E7F4FA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 66px;
 }
 
-.container-Nama {
+.container-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-input p {
+    font-size: 32px;
+    font-weight: 500;
+    width: 332px;
+}
+
+.container-input input {
     width: 437px;
-    height: 45px;
+    height: 44px;
     background-color: white;
     border-radius: 44px;
-    margin-top: 15px;
-    
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.container-TTL {
+.container-input textarea {
     width: 437px;
-    height: 45px;
+    height: 110px;
+    background-color: white;
+    border-radius: 22px;
+    padding-left: 10px;
+    margin: 0;
+    resize: none; 
+    padding-top: 10px; 
+    padding-right:10px;
+}
+
+.container-input select {
+    width: 437px;
+    height: 44px;
     background-color: white;
     border-radius: 44px;
-    margin-top: 15px;
-    
+    padding-left: 10px;
+    border: none;
+    -webkit-appearance: none; /* Remove default arrow icon on Safari */
+    appearance: none; /* Remove default arrow icon on other browsers */
 }
 
-.container-usia {
-    width: 437px;
-    height: 45px;
-    background-color: white;
-    border-radius: 44px;
-    margin-top: 19px;
-    
+.container-input select::after {
+    content: '\25BC'; /* Unicode character for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
 }
 
-.container-riwayat {
-    width: 437px;
-    height: 45px;
-    background-color: white;
-    border-radius: 44px;
-    margin-top: 21px;
-    
-    
+.container-button {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    margin-top: 150px;
 }
 
-.container-pertanyaan {
-    width: 437px;
-    height: 115px;
-    background-color: white;
-    border-radius: 44px;
-    margin-top: 21px;
-
-    
-}
-
-.container-pembayaran {
-    width: 437px;
-    height: 45px;
-    background-color: white;
-    border-radius: 44px;
-    margin-top: 25px;
-    
-}
 .button-reset {
     width: 214px;
     height: 45px;
