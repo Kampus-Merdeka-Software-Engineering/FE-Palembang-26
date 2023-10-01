@@ -174,7 +174,7 @@ function openConsultationForm(doctorName) {
         if (namaInput.value.trim() === "" || keluhanInput.value.trim() === "" || keluhanInput.value.trim() === "" || usiaKehamilanInput.value.trim() === "" || riwayatPenyakitInput.value.trim() === "") {
             e.preventDefault(); // Prevent the form from submitting
             errorMessage.textContent = "please fill in all fields correctly.";
-            errorMessage.style.transform = "translateY(-100px)"; // Translate the error message up
+            errorMessage.style.transform = "translateY(-180px)"; // Translate the error message up
         } else {
             // Clear any previous error message
             errorMessage.textContent = "";
