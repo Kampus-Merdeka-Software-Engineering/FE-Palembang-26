@@ -155,9 +155,6 @@ function openConsultationForm(doctorName) {
     consultationPopup.style.display = 'block';
     overlay.style.display = 'block';
 
-    // Generate a more unique key using the doctor's name, timestamp, and random string
-    const uniqueKey = `${doctorName}-${Date.now()}-${generateRandomString(6)}`;
-
     // Set the doctor's name in the form
     const doctorNameField = consultationPopup.querySelector('#doctor-name');
     doctorNameField.textContent = doctorName;
@@ -174,7 +171,7 @@ function openConsultationForm(doctorName) {
         if (namaInput.value.trim() === "" || keluhanInput.value.trim() === "" || keluhanInput.value.trim() === "" || usiaKehamilanInput.value.trim() === "" || riwayatPenyakitInput.value.trim() === "") {
             e.preventDefault(); // Prevent the form from submitting
             errorMessage.textContent = "please fill in all fields correctly.";
-            errorMessage.style.transform = "translateY(-180px)"; // Translate the error message up
+            errorMessage.style.transform = "translateY(-100px)"; // Translate the error message up
         } else {
             // Clear any previous error message
             errorMessage.textContent = "";
@@ -183,7 +180,7 @@ function openConsultationForm(doctorName) {
         // Access the form fields and their values
         const formData = new FormData(consultationForm);
         // Append the doctor's name to the form data
-        formData.append('uniqueKey', uniqueKey);
+        formData.append('doctorName', doctorName);
 
         // Convert form data to a JavaScript object
         const formDataObject = {};
@@ -192,10 +189,10 @@ function openConsultationForm(doctorName) {
         });
 
         // Save the form data to localStorage
-        localStorage.setItem(uniqueKey, JSON.stringify(formDataObject));
+        localStorage.setItem(doctorName, JSON.stringify(formDataObject));
 
         // You can now submit the formData to your server or process it as needed
-        console.log('Form Data:', formData);
+        console.log('formDataObject:', formDataObject);
         // Close the consultation form
         consultationPopup.style.display = 'none';
         overlay.style.display = 'none';
@@ -222,14 +219,3 @@ specialists.forEach((specialist) => {
     const card = createContactCard(specialist);
     doctorsContainer.appendChild(card);
 });
-
-// Function to generate a random alphanumeric string of a given length
-function generateRandomString(length) {
-    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let randomString = '';
-    for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * charset.length);
-        randomString += charset[randomIndex];
-    }
-    return randomString;
-}
