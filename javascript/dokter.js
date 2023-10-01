@@ -86,18 +86,35 @@ function openConsultationForm(doctorName) {
     consultationPopup.style.display = 'block';
     overlay.style.display = 'block';
 
+    // Generate a more unique key using the doctor's name, timestamp, and random string
+    const uniqueKey = `${doctorName}-${Date.now()}-${generateRandomString(6)}`;
+
     // Set the doctor's name in the form
     const doctorNameField = consultationPopup.querySelector('#doctor-name');
     doctorNameField.textContent = doctorName;
 
+    const namaInput = document.getElementById("nama");
+    const keluhanInput = document.getElementById("keluhan");
+    const usiaKehamilanInput = document.getElementById("usiaKehamilan");
+    const riwayatPenyakitInput = document.getElementById("riwayatPenyakit");
+    const errorMessage = document.getElementById("error-message");
+
     // Handle form submission
     const consultationForm = consultationPopup.querySelector('#consultation-form');
     consultationForm.addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent the form from submitting
+        if (namaInput.value.trim() === "" || keluhanInput.value.trim() === "" || keluhanInput.value.trim() === "" || usiaKehamilanInput.value.trim() === "" || riwayatPenyakitInput.value.trim() === "") {
+            e.preventDefault(); // Prevent the form from submitting
+            errorMessage.textContent = "please fill in all fields correctly.";
+            errorMessage.style.transform = "translateY(-100px)"; // Translate the error message up
+        } else {
+            // Clear any previous error message
+            errorMessage.textContent = "";
+            errorMessage.style.transform = "translateY(0)"; // Reset the error message position
+            
         // Access the form fields and their values
         const formData = new FormData(consultationForm);
         // Append the doctor's name to the form data
-        formData.append('doctorName', doctorName);
+        formData.append('uniqueKey', uniqueKey);
 
         // Convert form data to a JavaScript object
         const formDataObject = {};
@@ -106,7 +123,7 @@ function openConsultationForm(doctorName) {
         });
 
         // Save the form data to localStorage
-        localStorage.setItem(doctorName, JSON.stringify(formDataObject));
+        localStorage.setItem(uniqueKey, JSON.stringify(formDataObject));
 
         // You can now submit the formData to your server or process it as needed
         console.log('Form Data:', formData);
@@ -116,14 +133,18 @@ function openConsultationForm(doctorName) {
 
         // Clear the form fields after submission if needed
         consultationForm.reset();
+        }
     });
 
-    // Add an event listener to close the consultation form
-    const closeButton = consultationPopup.querySelector('#close-consultation-popup');
-    closeButton.addEventListener('click', () => {
-        consultationPopup.style.display = 'none'; // Close the popup
-        overlay.style.display = 'none';
-    });
+        // Add an event listener to close the consultation form
+        const closeButton = consultationPopup.querySelector('#close-consultation-popup');
+        closeButton.addEventListener('click', () => {
+            consultationPopup.style.display = 'none'; // Close the popup
+            overlay.style.display = 'none';
+            // Clear any previous error message
+            errorMessage.textContent = "";
+            errorMessage.style.transform = "translateY(0)"; // Reset the error message position
+        });
 }
 
 // Generate and append doctor cards to the container
@@ -132,3 +153,14 @@ specialists.forEach((specialist) => {
     const card = createContactCard(specialist);
     doctorsContainer.appendChild(card);
 });
+
+// Function to generate a random alphanumeric string of a given length
+function generateRandomString(length) {
+    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let randomString = '';
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * charset.length);
+        randomString += charset[randomIndex];
+    }
+    return randomString;
+}
