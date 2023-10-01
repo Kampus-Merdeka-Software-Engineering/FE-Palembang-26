@@ -42,7 +42,76 @@ const specialists = [
         rating: '90%',
         price: 'Rp. 150.000',
     },
-    // Add more specialist objects here
+    {
+        name: 'Dr. Linda Anderson Sp. OG',
+        specialist: 'Dokter Kandungan',
+        experience: '33 tahun',
+        rating: '87%',
+        price: 'Rp. 155.000',
+    },
+    {
+        name: 'Dr. Michael Brown Sp. OG',
+        specialist: 'Dokter Kandungan',
+        experience: '36 tahun',
+        rating: '91%',
+        price: 'Rp. 160.000',
+    },
+    {
+        name: 'Dr. Emily Clark Sp. OG',
+        specialist: 'Dokter Kandungan',
+        experience: '31 tahun',
+        rating: '89%',
+        price: 'Rp. 145.000',
+    },
+    {
+        name: 'Dr. William Davis Sp. OG',
+        specialist: 'Dokter Kandungan',
+        experience: '43 tahun',
+        rating: '94%',
+        price: 'Rp. 165.000',
+    },
+    {
+        name: 'Dr. John Evans Sp. OG',
+        specialist: 'Dokter Kandungan',
+        experience: '39 tahun',
+        rating: '88%',
+        price: 'Rp. 155.000',
+    },
+    {
+        name: 'Dr. Melissa Foster Sp. OG',
+        specialist: 'Dokter Kandungan',
+        experience: '47 tahun',
+        rating: '92%',
+        price: 'Rp. 160.000',
+    },
+    {
+        name: 'Dr. David Green Sp. OG',
+        specialist: 'Dokter Kandungan',
+        experience: '34 tahun',
+        rating: '89%',
+        price: 'Rp. 145.000',
+    },
+    {
+        name: 'Dr. Sarah Hill Sp. OG',
+        specialist: 'Dokter Kandungan',
+        experience: '37 tahun',
+        rating: '93%',
+        price: 'Rp. 150.000',
+    },
+    {
+        name: 'Dr. Jennifer Lee Sp. OG',
+        specialist: 'Dokter Kandungan',
+        experience: '41 tahun',
+        rating: '91%',
+        price: 'Rp. 155.000',
+    },
+    {
+        name: 'Dr. Christopher Miller Sp. OG',
+        specialist: 'Dokter Kandungan',
+        experience: '44 tahun',
+        rating: '90%',
+        price: 'Rp. 160.000',
+    },
 ];
 
 // Function to create a contact card
