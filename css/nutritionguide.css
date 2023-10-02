@@ -1,0 +1,89 @@
+/* JUDUL NUTRITION */
+.judul-nutrition {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    margin-top: 57px;
+}
+
+.container-judul{
+    width: 912px;  
+    height: 155px; 
+    background-color: #DBE6EB;
+    border-radius: 44px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    font-weight: 500;
+    position: relative;
+}
+
+.vector-bintang {
+    height: 68.19px; 
+    width: 68.88px; 
+    position: absolute; 
+    right: 0; 
+    top: 0;
+    transform: translateY(-23px) translateX(25px);
+}
+
+.vector-judul {
+    height: 611px; 
+    width: 5vw;
+    position: absolute;
+    left: 220px;
+    z-index: 0;
+    transform: translateY(65px) translateX(-220px);
+}
+
+.vector-judul2 {
+    height: 611px;
+    width: 6vw;
+    position: absolute;
+    top: 462px;
+    right: -222px;
+    z-index: 0;
+    transform: translateY(65px) translateX(-220px);
+}
+
+/* Section Gambar*/
+.container-gambar{
+    width: 100%; 
+    height: 429px; 
+    background-image: url(nutriguide/img);
+    margin-top: 88px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 136px;
+}
+
+/* Section Materi */
+.container-materi {
+    width: 90%;
+    margin: 0 auto;
+    height: 370px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-materi h1 {
+    color: #1090CB; 
+    font-size: 50px;
+}
+
+.container-materi p {
+    font-size: 28px;
+}
+body {
+    background-image: url(downloads/nutriguide/image/protein);
+}
+
+
+
+
