@@ -53,7 +53,7 @@
 }
 
 .container-judul{
-    width: 920px;  
+    width: 912px;  
     height: 155px; 
     border-radius: 44px;
     margin: 0 auto;
@@ -128,7 +128,3 @@
 body {
     background-image: url(downloads/nutriguide/image/protein);
 }
-
-
-
-
