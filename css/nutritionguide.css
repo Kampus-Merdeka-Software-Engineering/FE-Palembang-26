@@ -1,13 +1,13 @@
-/* JUDUL NUTRITION */
-.judul-nutrition {
-    display: flex; 
+/* JUDUL SYMPTOM */
+.judul-symptom {
+    display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 57px;
 }
 
 .container-judul{
-    width: 912px;  
+    width: 912px; 
     height: 155px; 
     background-color: #DBE6EB;
     border-radius: 44px;
@@ -31,10 +31,10 @@
 }
 
 .vector-judul {
-    height: 611px; 
-    width: 5vw;
+    height: 531px; 
+    width: 475px;
     position: absolute;
-    left: 220px;
+    left: 0;
     z-index: 0;
     transform: translateY(65px) translateX(-220px);
 }
