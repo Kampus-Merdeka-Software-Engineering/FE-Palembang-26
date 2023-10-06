@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Find the active link based on the current page URL and add a class
     if (currentPageUrl.includes("index.html")) {
         document.getElementById("home-link").classList.add("active");
-    } else if (currentPageUrl.includes("aboutus.html")) {
+    } else if (currentPageUrl.includes("about-us.html")) {
         document.getElementById("about-link").classList.add("active");
     } else {
         // If the current page is neither "About us" nor "Home," make "Services" link active
