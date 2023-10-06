@@ -53,7 +53,7 @@
 .container-gambar{
     width: 100%; 
     height: 429px; 
-    background-image: url(nutriguide/img);
+    background-color: #d3e9f3;
     margin-top: 88px;
     display: flex;
     flex-direction: row;
@@ -62,26 +62,56 @@
     gap: 136px;
 }
 
-/* Section Materi */
-.container-materi {
-    width: 90%;
-    margin: 0 auto;
-    height: 370px;
+/* Section Materi Rata Kiri*/
+.container-materi-kiri {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 15px;
 }
 
-.container-materi h1 {
+.container-materi-kiri img {
+    margin-left: 35px;
+    width: 223px;
+    height: 176px;
+}
+
+.container-materi-kiri h1 {
     color: #1090CB; 
     font-size: 50px;
 }
 
-.container-materi p {
-    font-size: 28px;
+.container-materi-kiri p {
+    font-size: 17px;
+    margin-right: 35px;
+    transform: translateY(-20px);
 }
-body {
-    background-image: url(downloads/nutriguide/image/protein);
+
+/* Section Materi Rata Kanan */
+.container-materi-kanan {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.container-materi-kanan img {
+    margin-right: 35px;
+    width: 223px;
+    height: 176px;
+}
+
+.container-materi-kanan h1 {
+    color: #1090CB; 
+    font-size: 50px;
+}
+
+.container-materi-kanan p {
+    font-size: 17px;
+    margin-left: 35px;
+    transform: translateY(-20px);
 }
 
 
