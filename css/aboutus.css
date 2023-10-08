@@ -2,10 +2,11 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    margin-top: 0%;
     padding-left: 80px;
     padding-bottom: 0%;
-    padding-right: 80px;
-    font-size: 27px;
+    padding-right: 90px;
+    font-size: 28px;
     text-align: justify;
 }
 
