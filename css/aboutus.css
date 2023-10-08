@@ -2,8 +2,11 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding-left: 100px;
+    padding-left: 80px;
+    padding-bottom: 10%;
+    padding-right: 220px;
     font-size: 30px;
+    text-align: justify;
 }
 
 .container-team {
