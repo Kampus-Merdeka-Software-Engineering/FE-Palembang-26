@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (storedData && storedData.email === enteredEmail && storedData.password === enteredPassword) {
                     // Valid login credentials, redirect to index.html
-                    window.location.href = "/pages/index.html";
+                    window.location.href = "/index.html";
                 } else {
                     event.preventDefault(); // Prevent the form from submitting
                     errorMessage.textContent = "Invalid email or password.";
