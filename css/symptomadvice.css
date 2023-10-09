@@ -52,7 +52,7 @@
     gap: 136px;
 }
 
-/* Section Materi */
+/* SECTION MATERI */
 .container-materi {
     width: 90%;
     margin: 0 auto;
@@ -60,6 +60,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 15px;
+}
+
+.container-materi img {
+    width: 224px;
+    height: 176px;
 }
 
 .container-materi h1 {
@@ -68,7 +74,8 @@
 }
 
 .container-materi p {
-    font-size: 28px;
+    font-size: 17px;
+    transform: translateY(-20px);
 }
 
 
