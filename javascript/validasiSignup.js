@@ -64,7 +64,7 @@ signupForm.addEventListener('submit', function (e) {
         const formDataJSON = JSON.stringify(formData);
 
         // Make an HTTP POST request to the backend to send the data
-        fetch('https://be-palembang-26.up.railway.app/user', {  // Updated URL
+        fetch('https://be-palembang-26.up.railway.app/user', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -75,18 +75,23 @@ signupForm.addEventListener('submit', function (e) {
         .then(data => {
             // Handle the response from the backend, if needed
             console.log('Response from server:', data);
+
+            // Close the popup (you can modify this part based on your actual popup implementation)
+            const popup = document.getElementById('popup');
+            popup.style.display = 'none'; // Assuming 'none' hides the popup
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = 'none'; // Assuming 'none' hides the popup
         })
         .catch(error => {
             console.error('Error:', error);
         });
 
-        // Close the popup (you can modify this part based on your actual popup implementation)
-        const popup = document.getElementById('popup');
-        popup.style.display = 'none'; // Assuming 'none' hides the popup
-        const overlay = document.getElementById('overlay');
-        overlay.style.display = 'none'; // Assuming 'none' hides the popup
+        // Convert formData to JSON string and save it in local storage
+        localStorage.setItem('formData', JSON.stringify(formData));
+
     }
 });
+
 
 
 // Function to display error messages
