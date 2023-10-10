@@ -159,59 +159,60 @@ function openConsultationForm(doctorName) {
     const doctorNameField = consultationPopup.querySelector('#doctor-name');
     doctorNameField.textContent = doctorName;
 
-    const namaInput = document.getElementById("nama");
-    const keluhanInput = document.getElementById("keluhan");
-    const usiaKehamilanInput = document.getElementById("usiaKehamilan");
-    const riwayatPenyakitInput = document.getElementById("riwayatPenyakit");
-    const errorMessage = document.getElementById("error-message");
-
     // Handle form submission
     const consultationForm = consultationPopup.querySelector('#consultation-form');
-    consultationForm.addEventListener('submit', function (e) {
-        if (namaInput.value.trim() === "" || keluhanInput.value.trim() === "" || keluhanInput.value.trim() === "" || usiaKehamilanInput.value.trim() === "" || riwayatPenyakitInput.value.trim() === "") {
-            e.preventDefault(); // Prevent the form from submitting
-            errorMessage.textContent = "please fill in all fields correctly.";
-            errorMessage.style.transform = "translateY(-100px)"; // Translate the error message up
-        } else {
-            // Clear any previous error message
-            errorMessage.textContent = "";
-            errorMessage.style.transform = "translateY(0)"; // Reset the error message position
-            
-        // Access the form fields and their values
-        const formData = new FormData(consultationForm);
-        // Append the doctor's name to the form data
-        formData.append('doctorName', doctorName);
+    consultationForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Prevent the default form submission behavior
 
-        // Convert form data to a JavaScript object
-        const formDataObject = {};
-        formData.forEach((value, key) => {
-            formDataObject[key] = value;
+        // Get form input values
+        const Nama = consultationForm.elements['nama'].value.trim();
+        const Keluhan = consultationForm.elements['Riwayat Penyakit'].value.trim();
+        const Usia_Kehamilan = consultationForm.elements['usiaKehamilan'].value.trim();
+        const Riwayat_Penyakit = consultationForm.elements['Keluhan'].value.trim();
+        const Pembayaran_Via = consultationForm.elements['pembayaranVia'].value.trim();
+
+        // Create a JavaScript object with the form data
+        const formData = {
+            Nama,
+            Keluhan,
+            Usia_Kehamilan,
+            Riwayat_Penyakit,
+            Pembayaran_Via,
+        };
+
+        // Convert formData to a JSON string
+        const formDataJSON = JSON.stringify(formData);
+
+        // Make an HTTP POST request to your endpoint
+        fetch('https://be-palembang-26.up.railway.app/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: formDataJSON
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response from the server, if needed
+            console.log('Response from server:', data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
         });
-
-        // Save the form data to localStorage
-        localStorage.setItem(doctorName, JSON.stringify(formDataObject));
-
-        // You can now submit the formData to your server or process it as needed
-        console.log('formDataObject:', formDataObject);
+        
         // Close the consultation form
         consultationPopup.style.display = 'none';
         overlay.style.display = 'none';
-
-        // Clear the form fields after submission if needed
-        consultationForm.reset();
-        }
     });
 
-        // Add an event listener to close the consultation form
-        const closeButton = consultationPopup.querySelector('#close-consultation-popup');
-        closeButton.addEventListener('click', () => {
-            consultationPopup.style.display = 'none'; // Close the popup
-            overlay.style.display = 'none';
-            // Clear any previous error message
-            errorMessage.textContent = "";
-            errorMessage.style.transform = "translateY(0)"; // Reset the error message position
-        });
+    // Add an event listener to close the consultation form
+    const closeButton = consultationPopup.querySelector('#close-consultation-popup');
+    closeButton.addEventListener('click', () => {
+        consultationPopup.style.display = 'none';
+        overlay.style.display = 'none';
+    });
 }
+
 
 // Generate and append doctor cards to the container
 const doctorsContainer = document.querySelector('.container-doctors');

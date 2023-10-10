@@ -108,31 +108,31 @@
             <!-- Add a field for the doctor's name -->
             <h2>Consultation with <span id="doctor-name"></span></h2>
     
-            <form id="consultation-form" action="#" class="consultation-form">
+            <form id="consultation-form" action="/chat" class="consultation-form">
                 <!-- Nama -->
                 <div class="container-input">
                     <label for="nama">Nama</label>
                     <input type="text" id="nama" name="nama" placeholder="Your Name">
                 </div>
-    
+            
                 <!-- Keluhan -->
                 <div class="container-input" style="transform: translateY(-35px);">
                     <label for="Riwayat Penyakit">Keluhan</label>
                     <input type="text" id="Riwayat Penyakit" name="Riwayat Penyakit">
                 </div>
-    
+            
                 <!-- Usia Kehamilan -->
                 <div class="container-input" style="transform: translateY(-70px);">
                     <label for="usiaKehamilan">Usia Kehamilan</label>
                     <input type="number" id="usiaKehamilan" name="usiaKehamilan" placeholder="Minggu ke - ">
                 </div>
-    
+            
                 <!-- Riwayat Penyakit -->
                 <div class="container-input" style="transform: translateY(-105px);">
                     <label for="Keluhan">Riwayat Penyakit</label>
                     <textarea id="Keluhan" name="Keluhan"></textarea>
                 </div>
-    
+            
                 <!-- Pembayaran Via -->
                 <div class="container-input" style="transform: translateY(-140px);">
                     <label for="pembayaranVia">Pembayaran Via</label>
@@ -145,9 +145,9 @@
                         <option value="bsi">BSI</option>
                     </select>
                 </div>
-    
+            
                 <input type="hidden" id="doctorName" name="doctorName" value="">
-
+            
                 <p id="error-message" style="color: red; text-align: center; font-size: 16px;"></p>
                 <div class="container-button">
                     <button class="button-reset" id="close-consultation-popup">Close</button>
