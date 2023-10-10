@@ -41,7 +41,7 @@ signupForm.addEventListener('submit', function (e) {
 
     // Clear existing error messages
     errorMessages.innerHTML = '';
-    
+
     // Display error messages
     displayErrorMessage('email', !emailValid, 'Please enter a valid email address.');
     displayErrorMessage('password', !passwordValid, 'Password must contain at least one capital letter and one number.');
@@ -52,15 +52,33 @@ signupForm.addEventListener('submit', function (e) {
     displayErrorMessage('username-length', !usernameLengthValid, 'Username should not exceed 15 characters.');
 
     if (emailValid && passwordValid && passwordsMatchValid && usernameValid && usernameLengthValid) {
-        // All validations passed, save data in local storage
+        // All validations passed, create a JavaScript object with the form data
         const formData = {
             email: emailInput.value,
             password: passwordInput.value,
+            confirm_Password: confirmPasswordInput.value,
             username: usernameInput.value
         };
 
-        // Convert formData to JSON string and save it in local storage
-        localStorage.setItem('formData', JSON.stringify(formData));
+        // Convert formData to a JSON string
+        const formDataJSON = JSON.stringify(formData);
+
+        // Make an HTTP POST request to the backend to send the data
+        fetch('https://be-palembang-26.up.railway.app/user', {  // Updated URL
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: formDataJSON
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response from the backend, if needed
+            console.log('Response from server:', data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 
         // Close the popup (you can modify this part based on your actual popup implementation)
         const popup = document.getElementById('popup');
@@ -69,6 +87,7 @@ signupForm.addEventListener('submit', function (e) {
         overlay.style.display = 'none'; // Assuming 'none' hides the popup
     }
 });
+
 
 // Function to display error messages
 function displayErrorMessage(field, show, message) {
@@ -95,5 +114,3 @@ closeButton.addEventListener('click', function () {
     // Clear any existing error messages
     errorMessages.innerHTML = '';
 });
-
-
