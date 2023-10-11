@@ -76,11 +76,6 @@ signupForm.addEventListener('submit', function (e) {
             // Handle the response from the backend, if needed
             console.log('Response from server:', data);
 
-            // Close the popup (you can modify this part based on your actual popup implementation)
-            const popup = document.getElementById('popup');
-            popup.style.display = 'none'; // Assuming 'none' hides the popup
-            const overlay = document.getElementById('overlay');
-            overlay.style.display = 'none'; // Assuming 'none' hides the popup
         })
         .catch(error => {
             console.error('Error:', error);
@@ -89,6 +84,11 @@ signupForm.addEventListener('submit', function (e) {
         // Convert formData to JSON string and save it in local storage
         localStorage.setItem('formData', JSON.stringify(formData));
 
+         // Close the popup (you can modify this part based on your actual popup implementation)
+         const popup = document.getElementById('popup');
+         popup.style.display = 'none'; // Assuming 'none' hides the popup
+         const overlay = document.getElementById('overlay');
+         overlay.style.display = 'none'; // Assuming 'none' hides the popup
     }
 });
 
